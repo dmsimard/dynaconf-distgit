@@ -1,7 +1,7 @@
 %global srcname dynaconf
 %global common_desc \
 dynaconf is a layered configuration system for Python applications with strong \
-support for 12-factor applications and extensions for Flask and Django.
+support for 12-factor applications and extensions for Flask and Django
 
 Name:           %{srcname}
 Version:        2.0.3
@@ -51,3 +51,7 @@ Requires:       python3-pyyaml
 %{python3_sitelib}/%{srcname}
 %{python3_sitelib}/%{srcname}-*.egg-info
 %{_bindir}/%{srcname}
+
+%changelog
+* Fri Jul 5 2019 David Moreau Simard <dmsimard@redhat.com> - 2.0.3-1
+- First version of the package
