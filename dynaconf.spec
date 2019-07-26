@@ -6,7 +6,7 @@ support for 12-factor applications and extensions for Flask and Django
 Name:           %{srcname}
 Version:        2.0.3
 Release:        1%{?dist}
-Summary:        Dynaconf is a dynamic configurator for python projects
+Summary:        A dynamic configurator for python projects
 
 License:        MIT
 URL:            https://github.com/rochacbruno/dynaconf
@@ -43,6 +43,9 @@ BuildRequires:  python3-toml
 %files -n python3-%{srcname}
 %license LICENSE
 %doc README.md
+# Trailing slash is to ensure setuptools behavior instead of distutils since
+# the project can use either and .egg-info could end up being a file or a
+# directory.
 %{python3_sitelib}/%{srcname}/
 %{python3_sitelib}/%{srcname}-*.egg-info/
 %{_bindir}/%{srcname}
